@@ -83,13 +83,7 @@ Delete ->
                                     // sabse pehle wala delete hojega 
 
 15) db.collectionName.deleteMany({}); // Agr koi proeprty nahi dete toh yeh sabko 
-                                      // delete krdeta
-----------------------------------------------------------------------------
-
-HOW TO Connect MONGODB WITH NODEJS:
-
-
-
+                                      // delete krdeta 
 
 
 
@@ -102,8 +96,15 @@ HOW TO Connect MONGODB WITH NODEJS:
 ------------------------------------------------------------------------
 
 
-MONGO DB COMPASS -> 
-1) Simply click on "Connect";
+HOW TO USE MONGO DB WITH NDOE JS 
+
+1) npm i init 
+2) npm i express 
+3) npm i mongoose; -> It is a npm package, It is mongodb library, with the help f 
+this we can   be able to connect with mongodb
+
+
+
 
 
 
