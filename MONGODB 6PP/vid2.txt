@@ -1,0 +1,143 @@
+1) mongodb uses json like document with optional 
+schemas but This have BSON format. [binary javascript object notation]
+
+
+1) show dbs -> isse jitne bhii database hai, vo sare 
+               show hojege
+
+2) show collections -> isse collections dikhti hai, 
+                collection is basically when there 
+                are mutiple document present in the 
+                database then we say it this is 
+                collection.
+
+
+3) use 6pp; -> [isse database create hoga apna, and 
+                vo use bhi krne lg jayega apne aap 
+                ]
+
+    show dbs; -> ye tab dikhaega jab kuch present ho 
+
+4) use 6pp; -> means currently yeh wala use krre hai,
+                and agr present nhi hoga toh create 
+                krdega
+                [switched to 6pp] ye likha aayega]
+
+
+5) db.students.insertOne({
+        name:'Arsh', age:22, favColor:'black'
+    })
+
+    // student - collection create hui.
+    // insertOne - ye ik method hai to add data 
+
+    op-> acknowledge true, jb successfully add krdega 
+
+    -> show dbs; -> ab ye 6pp database show hojega 
+    -> show collections; -> ab ye student wali collection name show hojegi
+
+6) db.collectionName.find(); // Jitne bhi uss collection ke andr documents hai vo 
+                            sare aajege
+
+7) db.collectionName.insertMany(
+    {name:'Abh' },
+    { name:'shek'},
+    {name:'programmer' }
+); 
+-> teeno ko id mil jaegi , and ik new collection create hojegi and sara data 
+-> enter hojega
+
+->  show collections; // sari collection aajegi 
+
+8) db.collectionName.find( {name:'arsh'} ); // Now ye sirf voi dega jiska name ye 
+hoga, chahe vo jitne marji ho 
+
+9) db.collectionName.find({name:'arsh'}).limit(1);
+ // .limit yeh lgane se vo dega jiska name sirf arsh hai, vo bhi sirf 1 chahe jitne 
+ //  mrji ho 
+
+10) db.collectionName.findOne({name:'arsh'}); // findOne se sirf 1 hi dega 
+
+11) db.collectionName.findOne(); // agr kuch bhi pass na kare toh sirf 1 hi dega 
+                                 // jo sabse uper hoga
+ 
+------------------------------------------------------------------------------
+NOW WE LEARNT -> CRUD; INSERT - means create krna, FIND - means read krna aagya 
+-------------------------------------------------------------------------------
+
+update ->
+
+12) db.collectionName.updateOne({name:'arsh'} , {$set: {name:'Arshdeep'} } ); 
+// inke andr 2 object aayege; 1st jo search krna hai 
+// 2nd paramter is: jo update krna hai, $set -> $It is a operator
+// update One sirf jo first wala matched hoga usko update hojega 
+
+13) db.collectionName.updateMany({name:'abhi'}, {$set: {name:'ABHISHEK'} } ); 
+// yeh jitne bhi honge sabko update krdega 
+
+---------------------------------------------------------------------------
+
+Delete -> 
+
+14) db.collectionName.deleteOne({}); // Agr iske andr koi property nahi dete to 
+                                    // sabse pehle wala delete hojega 
+
+15) db.collectionName.deleteMany({}); // Agr koi proeprty nahi dete toh yeh sabko 
+                                      // delete krdeta
+----------------------------------------------------------------------------
+
+HOW TO Connect MONGODB WITH NODEJS:
+
+
+
+
+
+
+16) db.collectionName.deleteOne({name:'Abhishek singh'});
+        // jo bhi abhishek name hoga first wala vo delete krdega 
+
+17) db.collectionName.deleteMany({name:'Abhishek singh'});
+        // yeh jitne bhi match honge vo sab delete krdega 
+
+------------------------------------------------------------------------
+
+
+MONGO DB COMPASS -> 
+1) Simply click on "Connect";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

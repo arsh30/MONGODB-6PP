@@ -1,0 +1,62 @@
+<!-- // textbox validation on username validation -->
+
+<!-- /*
+1. empty na hoye field
+2. charcter km se kam 3 length honi chaie
+3. character ki max length 20 honi chaiye
+4. using regularExp; eg:  aisa code likhege jisse user koi bhi number input krwara hai 
+ ya koi special characer to direct error dikhadega
+ 
+*/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TEXT BOX VALIDATIONS</title>
+  </head>
+  <body>
+    <form onsubmit="return myFun()">
+      <!-- return isliye nhi likha coz -> YEH SERVER PR NA JAYE TAKI -->
+      <label for="username">Username</label>
+      <input type="text" value="" id="username" />
+      <span id="message"></span> <br />
+      <br />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+  <script>
+    const myFun = () => {
+      var correct_way = /^[A-Za-z] + $/; // note -> this is manatory /^ [ ] + $/
+      // This accept only letters
+      var a = document.getElementById("username").value;
+      console.log(a);
+
+      if (a == "") {
+        document.getElementById("message").innerHTML =
+          "** Please fill Your username";
+        return false; // ye likhna is very imp
+      }
+
+      if (a.length < 3) {
+        document.getElementById("message").innerHTML =
+          "** User name must be of 3 character";
+        return false;
+      }
+
+      if (a.length > 8) {
+        document.getElementById("message").innerHTML =
+          "** User name less than 8 character";
+        return false;
+      }
+
+      //   using reg ex
+      if (a.match(correct_way)) true;
+      else {
+        document.getElementById("message").innerHTML =
+          "** only alphabets are allowed";
+        return false;
+      }
+    };
+  </script>
+</html>

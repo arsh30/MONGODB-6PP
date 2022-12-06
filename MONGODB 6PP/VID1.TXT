@@ -1,0 +1,28 @@
+INSTALLATION -> 
+
+1)mongo db download ->MongoDB community download -> 
+    ZIP rhene do, then download 
+    -> next , next, click on complete -> intall 
+    mongodb as a service isko click tab kor jb RAM 
+    4GB se jyda h, next, next, install
+
+    It install mongoDB compass 
+
+    go to localdiskC-Program files -> mongodb -> 
+    server -> 5.0 -> bin
+
+    so upr se jo link hai vo copy krrke -> this pc -> 
+    properties -> advanced system setting -> 
+    environment variables -> 
+     path -> edit -> new me jakr vo paste krdo link 
+     -> ok -> ok -> ok
+
+     [Note -> jo 4gb wala uncheck kra tha ki 4gb ram 
+     hoye toh hi tick kro uska mtlb yeh tha: 
+     agr hum task manager me jaate hai, to "mongodb 
+     database server" ki "service" run hori hoegi]
+
+     Agr tick na kra hota -> toh hume terminal me 
+     likhna pdhta -> "mongod" ab ye service chalu 
+     hogi then apni commands run kr skte hai
+     or ye chalakr rakhna hai jab tak hum kaam krre mongodb pr

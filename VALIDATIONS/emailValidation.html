@@ -1,0 +1,47 @@
+<!-- EMAIL VALIDATIONS
+    EX: thapa@technical.com
+
+    1) @ -> ye kbhi bhi 0 index pr nahi hota
+    2) . -> . ke baad 2 ya max 3 character ho skte h. eg: .com, .in , .org.in 
+
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>EMAIL VALIDATION</title>
+  </head>
+  <body>
+    <form action="" name="myForm" onsubmit="return myFun()">
+      <label for="email">Email</label>
+      <input type="text" value="" id="email" />
+      <span id="message" style="color: red"></span><br />
+      <br />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+  <script>
+    const myFun = () => {
+      var a = document.getElementById("email").value;
+      var b = document.getElementById("message");
+
+      if (a.indexOf("@") <= 0) {
+        b.innerHTML = "** Invalid @ position";
+        return false;
+      }
+      //   thapa@gmail.com, so 15 - 4 = 11
+      //   11 index pr dot hona hi chaiye
+
+      //   thapa@gmail.co; so 14 - 3 = 11
+      //   11 index pr hona hi chaiye agr 2 dot wale aare hai toh
+
+    //   abc@gmail.a -> 14 - 4 = 10 or 14 - 3 = 11
+      if (a.charAt(a.length - 4) != "." && a.charAt(a.length - 3) != ".") {
+        b.innerHTML = "** Invalid dot position";
+        return false;
+      }
+    };
+  </script>
+</html>

@@ -1,0 +1,14 @@
+show dbs; // This show all databases
+show collections; // isse jitni bhi collection hongi vo aajegi
+use 6pp; // isse apna database create hojega and use bhi krne lgjayega apne aap
+        // and use bhi yeh database krne lag jaega, agr swicthed likha aaya toh
+
+
+
+
+1) db.collectionName.insertOne({}); // yeh collection create bhi krega and add bhi
+                                    // krega
+                                    
+2) db.collectionName.insertMany({}, {}, {});
+
+3) db.collection.find();  // sari collections show hojegi

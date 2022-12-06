@@ -1,0 +1,49 @@
+Express is a framework for Node js. 
+Nodejs jo server bnaya tha uska code long tha ise hum very easily bna skte hai. [Bdi website me server bnana is must]
+
+2) install -> npm i express
+
+3) <--------------- Makin Server -------------> 
+
+const express = require("express");
+const app = express();
+
+const PORT = 4000;
+
+app.listen(PORT, () => {
+  console.log(`Server is working on port: ${PORT}`);
+});
+
+<---------------------AB ROUTES KHDE KREGE TO WO SHOW HOEGE----------------------------->
+const express = require("express");
+const app = express();
+
+const PORT = 4000;
+
+// Build routes to show -> Otherwise got error cannot get /
+
+app.get("/", (req, res) => {
+  res.send("<h1>HELLO WORLD</h1>");
+});
+
+app.get("/about", (req, res) => {
+  res.send("<h1>ABOUT PAGE</h1>");
+});
+
+app.post("/", (req, res) => {
+  const user = req.body.name;
+  // frontend me jo bhi likhege name ki value vo ajegi
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is working on port: ${PORT}`);
+});
+
+/*
+GET -> Read krta hai
+POST -> Create, Means Data frontend me type krege, or bhjege backend me
+PUT -> Update somehing
+DELETE -> Delete Something
+*/
+
+----------------------------------------------------------------------------------

@@ -1,0 +1,38 @@
+<!-- error 
+
+1. text box should not be empty
+2. jo enter krra hai vo sirf number hone chaiye
+3. jo 10 digit hone chaiye vo number
+4. india ke number should be 9 , 8 , 7 means index number
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MOBILE NUMBER VALIDATION</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">MOBILE NUMBER VALIDATION</h1>
+
+    <form action="" onsubmit="return myfun()">
+      <!-- return likhna is imp - isse data jo h server par nahi jata -->
+
+      <label for="phone">Phone</label>
+      <input type="text" name="" id="phone" value="" />
+      <span id="message"></span> <br />
+      <br />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+  <script>
+    const myfun = () => {
+      var a = document.getElementById("phone").value;
+      var span = document.getElementById("message").value;
+      if (a == "") {
+        span.innerHTML = "** Phone number should not be empty";
+      }
+    };
+  </script>
+</html>

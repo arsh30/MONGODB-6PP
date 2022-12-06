@@ -1,0 +1,96 @@
+Node,express,MongoDb
+
+1) Node Js is an open source platform, Javascript runtime environment
+    that runs on V8 enginee and execute Javascript
+
+2) to check -> ki install hua h Node ya nahi, write in terminal -> node,  Jo Jo browser me krre the vo sb idr kar skte hai
+terminal .To run Javascript file -> node filename.js
+
+3) npm  -> npm is node package manager agr kuch bhi install krna hoga to npm ke aage likhege 
+
+3.1) npm init -> package name -> app
+    ise Package.json file bnegi, package.json -> Isme vo sari files   
+    hongi jo jo require hai project me
+    Jo Jo install krege vo isme aajegi like :
+    npm i packagename, eg: npm i express 
+
+    package_lock.json -> to keep follow up of exact dependency tree, 
+    It store an exact version dependency
+
+    [NOTE -> AGR NODE_MODULE DELETE HOJE TOH HOW WE INSTALL ->
+    WRITE -> npm install ]
+    npm packages example -> cloudnary, express, sass etc 
+
+    to uninstall package -> npm uninstall packagename
+
+3.2) HOSTING 
+
+1) In package.json -> script -> start: "node index.js" [imp] -> 
+then write npm start 
+
+2) -> open heroku login -> search heroku cli [on google download]
+    In - heroku -> create New App
+    App name -
+    region -
+    create app -
+
+    In terminal -> 
+    - run heroku login command -> do login [terminal Me id ajegi]
+   
+    TO DEPLOY YOUR APP 
+    [Nodemodule - isko gitgnore me rkh kr upload krege]
+
+    [Note -> Jbhi upload krte hai toh 1 file chaiye hoti h ie
+     Procfile (iska koi ext nhi hota)] 
+
+     - and isme likhege [web: node index.js] [jo file name tha     
+      vo  npm start ka same]
+
+    copy commands from HEROKU ----> 
+
+    -git init
+    - git add .
+    - git commit -m "Message"
+    - heroku git:remote [copy command] -> CHECK KREGE git remote 
+     likhkr in terminal
+    - git push heroku master
+
+    To check ki hui ya nahi -> go to setting [heroku] domain ara 
+    hoga  agr immediate nhi open hui to check 
+    1) Procfile -> web: node index.js [: ise pehle space nhi ayega]
+    2) npm start ya yeh nhi likha hota 
+    3) Ya PORT -> So ye likhege process.env.PORT
+
+    Now agin deploy 
+    - git add .
+    - git commit -m "mesage"
+    - git remote 
+    - git push heroku master
+
+Agr fir bhi error aaye toh check PORT ->process.env hoye or
+localhost nahi hona chaiye
+
+
+-------------------FINISH -------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
